@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes animation1{
+            from{background-color:red;}
+            to{background-color:yellow;}
+        }
+        @keyframes animation2{
+            0%{background-color:red;}
+            25%{background-color:yellow;}
+            50%{background-color:blue;}
+            100%{background-color:green;}
+        }
+        @keyframes animation3{
+            0%{background-color:red;}
+            25%{background-color:yellow;}
+            50%{background-color:blue;}
+            100%{background-color:green;}
+        }
+        @keyframes animation4{
+            0%{background-color:red;}
+            25%{background-color:yellow;}
+            50%{background-color:blue;}
+            100%{background-color:green;}
+        }
+        @keyframes animation5{
+            0%{background-color:red;float:left;}
+            50%{background-color:blue;float:right;}
+            100%{background-color:green;float:left;}
+        }
+        @keyframes animation6{
+            0%{background-color:red;left:0px;top:0px;}
+            25%{background-color:yellow;left:0px;top:200px;}
+            50%{background-color:yellow;left:200px;top:200px;}
+            75%{background-color:blue;left:200px;top:0px;}
+            100%{background-color:green;left:0px;top:0px;}
+        }
+        @keyframes animation7{
+            0%{background-color:red;left:0px;top:0px;}
+            25%{background-color:yellow;left:0px;top:200px;}
+            50%{background-color:yellow;left:200px;top:200px;}
+            75%{background-color:blue;left:200px;top:0px;}
+            100%{background-color:green;left:0px;top:0px;}
+        }
+        @keyframes moves{
+            from{left:0px;}
+            to{left:400px;}
+        }
+        @keyframes rotate{
+            0%{left:0px;transform:rotate(0deg);}
+            50%{left:400px;transform: rotate(180deg);}
+            100%{left:0;transform:rotate(360deg);}
+        }
+        .box{
+            width:100px;
+            height:100px;
+            border:1px solid black;
+        }
+        .box1{
+            background-color:red;
+            /*Thirrja e animacionit animation1*/
+            animation-name:animation1;
+            animation-duration:4s;
+        }
+        .box2{
+            background-color:red;
+            animation-name: animation2;
+            animation-duration: 4s;
+            /*
+            we can use animation-delay:2s nenkupton qe animacioni do filloj pas 2 sekondash
+            animation-delay:2s;    
+            */
+        }
+        .box3{
+            background-color:red;
+            animation-name: animation3;
+            animation-duration: 4s;
+            animation-iteration-count: 3;
+        }
+        .box4{
+            background-color:red;
+            animation-name: animation4;
+            animation-duration: 4s;
+            animation-iteration-count:infinite;
+        }
+        .box5{
+            position:relative;
+            background-color:red;
+            animation-name: animation5;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+        }
+        .box6{
+            position: relative;
+            clear:both;
+            background-color:red;
+            animation-name: animation6;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        .box7{
+            position: relative;
+            background-color:red;
+            animation-name: animation7;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .box_v2{
+            width:100px;
+            height:50px;
+            background-color:dodgerblue;
+            font-weight:bold;
+            position:relative;
+            margin-bottom: 10px;
+        }
+        .box8{
+            background-color:dodgerblue;
+            animation:moves 5s infinite;
+            animation-timing-function: linear;
+        }
+        .box9{
+            background-color:dodgerblue;
+            animation:moves 5s infinite;
+            animation-timing-function: ease;
+        }
+        .box10{
+            background-color:dodgerblue;
+            animation:moves 5s infinite;
+            animation-timing-function: ease-in;
+        }
+        .box11{
+            background-color:dodgerblue;
+            animation:moves 5s infinite;
+            animation-timing-function: ease-out;
+        }
+        .box12{
+            background-color:dodgerblue;
+            animation:moves 5s infinite;
+            animation-timing-function: ease-in-out;
+        }
+        .box13{
+            position: relative;
+            background-color: dodgerblue;
+            animation-name: rotate;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>Animations</header>
+    <main>
+        <h2>Animate a box changing background color</h2>
+        <div class="box1 box"></div>
+        <h2>Animate a box changing background color to different colors</h2>
+        <div class="box2 box"></div>
+        <h2>Animate a box changing background color to different colors until it finishes 3 iterations(cycles)</h2>
+        <div class="box3 box"></div>
+        <h2>Animate a box changing background color to different colors infinitly loop</h2>
+        <div class="box4 box"></div>
+        <h2>Animate a box changing direction from left to right then again left with float</h2>
+        <div class="box5 box"></div>
+        <h2 style="clear: both;">Animate a box changing filling a square road for this parent mus be position relative</h2>
+        <div class="box6 box"></div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <h2 style="clear: both;">Animate a box changing filling a square road for this parent mus be position relative in alternate form first forward then backwards</h2>
+        <div class="box7 box"></div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <h2>Animate a box using timing funstion:linear,ease,ease-in,ease-out,ease-in-outr</h2>
+        <div class="box8 box_v2">linear</div>
+        <div class="box9 box_v2">ease</div>
+        <div class="box10 box_v2">ease-in</div>
+        <div class="box11 box_v2">ease-out</div>
+        <div class="box12 box_v2">ease-in-out</div>
+        <h2>Animate a box which will rotate and go left to right</h2>
+        <div class="box13 box_v2">Rotate me</div>
+    </main>
+</body>
+</html>
