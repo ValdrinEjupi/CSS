@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .relative{
+            position: relative;
+            height:100px;
+            border:1px solid black;
+            background-color:green;
+            left:40px;
+            top:40px;
+        }
+        .relative p{
+            border: 1px solid white;
+        }
+        .absolute{
+            position: absolute;
+            width:100px;
+            height:100px;
+            background-color:pink;
+            border:1px solid black;
+            top:75px;
+            right:30px;
+        }
+    
+        .fixed{
+            position: fixed;
+            width:100px;
+            height:40px;
+            border: 1px solid black;
+            bottom:0;
+            right:0;
+        }
+        .sticky{
+           position:-webkit-sticky;
+           position: sticky;
+           border:1px solid black;
+           top:0px;
+           background-color: grey;
+
+        }
+        .sticky ul{
+            list-style-type: none;
+        }
+        .sticky ul li{
+            display:inline;
+            margin-left:30px;
+            border-right:1px solid black;
+        }
+        .sticky ul li:last-child{
+            border-right: none;
+        }
+        .sticky ul li a{
+            text-decoration: none;
+            display: inline-block;
+            
+        }
+        .sticky ul li a:hover{
+            background-color:deeppink;
+        }
+        .relative2{
+            position:relative;
+            width:700px;
+            height:700px;
+            border:1px solid black;
+            background-color:red;
+        }
+        .absolute2{
+            position:absolute;
+            width:100px;
+            height:100px;
+            border:1px solid black;
+            background-color:orange;
+            top:200px;
+            right:250px;
+        }
+        div.test{
+            position:-webkit-sticky;
+            position:sticky;
+            top:0;
+            padding:5px;
+            background-color:#cae8ca;
+            border:2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>Positions:static,relative,absolute,sticky</header>
+   <main>
+    <h3>Position static:by default each element have static position</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum asperiores, vero deleniti iusto laudantium in. Dolorem soluta quas in ullam laudantium reiciendis iure sed blanditiis temporibus pariatur, placeat sequi corrupti.</p>
+   <br><br><br>
+   <h3>Position:relative-we use this so we can adjust an element position by properties left,right,bottom,top</h3>
+   <div class="relative">
+       <p>This div element has postion relative</p>
+   </div>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis possimus inventore saepe nesciunt, voluptates earum? Repellendus dolorem adipisci vero beatae distinctio voluptatibus nobis maxime ullam, repudiandae sint nostrum vitae!</p>
+   <h3>Position absolute-it i injoron qdo element tjter thuajse te tjeret jane te padukshem per te</h3>
+   <div class="absolute">Katrori me vetin absolute</div>
+   <h3>Position:fixed-eshte ngjashum sikurse absolute por ketu me scroll prap do ngel ne poziten e njejt</h3>
+    <div class="fixed">Its me in postion fixed</div>
+   <h3>Postion:sticky-kete e perdorim psh ne navbar eshte ngjashum sikurse fixed vetem ketu kur e bejm scroll dhe arrijm te elementi qe osht sticky 
+       postion ather ky vendose me se larti gjate scrollit duke i parakalu qdo element tjter
+   </h3>
+   <div class="sticky">
+           <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+           </ul>
+   </div>
+   <h2>Kombinimi i position relative dhe absolute</h2>
+   <div class="relative2"> I am Parent with postion relative
+       <div class="absolute2">I am child position absolute in relative parent</div>
+   </div>
+</main>
+</body>
+</html>
