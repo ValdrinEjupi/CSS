@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divbox{
+            width:800px;
+            height:350px;
+            border:1px solid black;
+            margin-bottom: 30px;
+        }
+        #box1{
+            background-image:linear-gradient(red,yellow);
+        }
+        #box2{
+            background-image:linear-gradient(to right,red,yellow);
+        }
+        #box3{
+            background-image:linear-gradient(to bottom right,red,yellow);
+        }
+        #box4{
+            background-image:linear-gradient(to right,rgba(255,0,0,0),rgba(255,0,0,1));
+        }
+        #box5{
+            background-image:linear-gradient(red,yellow 10%,green 20%);
+        }
+        #box6{
+            background-image:repeating-linear-gradient(red,yellow 10%,green 15%);
+        }
+        #box7{
+            background-image:radial-gradient(red,yellow,green);
+        }
+        #box8{
+            background-image:radial-gradient(red 5%,yellow 15%,green 60%);
+        }
+        #box9{
+            background-image:radial-gradient(circle,red,yellow,green);
+        }
+        #box10{
+            background-image:radial-gradient(closest-side at 60% 55%,red,yellow,black);
+            color:white;
+        }
+        #box11{
+            background-image:radial-gradient(farthest-side at 60% 55%,red,yellow,black);
+            color:white;
+        }
+        #box12{
+            background-image:radial-gradient(closest-corner at 60% 55%,red,yellow,black);
+            color:white;
+        }
+        #box13{
+            background-image:radial-gradient(farthest-corner at 60% 55%,red,yellow,black);
+        }
+        #box14{
+            background-image:repeating-radial-gradient(red,yellow 10%,green 15%);
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Gradient Colors</h1> </header>
+    <h2>Linear Gradients</h2>
+    <div class="divbox" id="box1"><h3>background-image:linear-gradient(red,yellow) it start from up to down</h3></div>
+    <div class="divbox" id="box2"><h3> background-image:linear-gradient(to right,red,yellow) from left to right</h3></div>
+    <div class="divbox" id="box3"><h3>background-image:linear-gradient(to bottom right,red,yellow) for diagonally start from up left to bottom right</h3></div>
+    <div class="divbox" id="box4"><h3>background-image:linear-gradient(to right,rgba(255,0,0,0),rgba(255,0,0,1)) we can use also rgba values</h3></div>
+    <div class="divbox" id="box5"><h3>background-image:linear-gradient(red,yellow 10%,green 20%) we can also use %-percentage for colors</h3></div>
+    <div class="divbox" id="box6"><h3>background-image:repeating-linear-gradient(red,yellow 10%,green 15%)</h3> </div>
+    <h2>Radial Gradients</h2>
+    <div class="divbox" id="box7"><h3>background-image:radial-gradient(red,yellow,green) - by default shape eshte elips dhe fillon nga brenda per jasht</h3></div>
+    <div class="divbox" id="box8"><h3> background-color:radial-gradient(red 5%,yellow 15%,green 60%)-edhe ketu mundemi me perdor perqidje per ngjyrat</h3></div>
+    <div class="divbox" id="box9"><h3>background-color:radiant-color(circle,red,yellow,green)-ketu mundemi me ndryshu edhe formen qe tham by default osht eclipse</h3></div>
+    <div class="divbox" id="box10"><h3>background-image:radial-gradient(closest-side at 60% 55%,red,yellow,black)</h3></div>
+    <div class="divbox" id="box11"><h3>background-image:radial-gradient(farthest-side at 60% 55%,red,yellow,black)</h3></div>
+    <div class="divbox" id="box12"><h3>background-image:radial-gradient(closest-corner at 60% 55%,red,yellow,black)</h3></div>
+    <div class="divbox" id="box13"><h3>background-image:radial-gradient(farthest-corner at 60% 55%,red,yellow,black)</h3></div>
+    <div class="divbox" id="box14"><h3>background-image:repeating-radial-gradient(red,yellow 10%,green 15%)</h3> </div>
+</body>
+</html>
